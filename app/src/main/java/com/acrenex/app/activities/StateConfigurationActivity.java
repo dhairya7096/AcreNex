@@ -1,0 +1,5 @@
+package com.acrenex.app.activities;
+import android.database.Cursor;import android.os.Bundle;import android.widget.LinearLayout;import androidx.appcompat.app.AppCompatActivity;import com.acrenex.app.database.DatabaseManager;import com.acrenex.app.utils;
+public class StateConfigurationActivity extends AppCompatActivity{
+ @Override protected void onCreate(Bundle b){super.onCreate(b);LinearLayout root=utils.screen(this,"State Configuration","The prototype is configurable for state-specific language, units, identifiers, portals and workflows.");DatabaseManager m=new DatabaseManager(this);Cursor c=m.getDatabase().rawQuery("SELECT state_code,state_name,language,area_unit,ulppin_format,workflow_profile FROM state_config WHERE active=1",null);try{while(c.moveToNext()){LinearLayout box=utils.column(this);box.addView(utils.text(this,c.getString(1)+" ("+c.getString(0)+")",18,utils.TEXT,true));utils.row(box,this,"Language",c.getString(2));utils.row(box,this,"Area unit",c.getString(3));utils.row(box,this,"ULPIN format",c.getString(4));utils.row(box,this,"Workflow",c.getString(5));utils.addCard(root,box,this);}}finally{c.close();}utils.setScreenContentView(this, root);}
+}

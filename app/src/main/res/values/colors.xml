@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="acrenex_navy">#0B3B2E</color>
+    <color name="acrenex_blue">#176B5A</color>
+    <color name="acrenex_green">#2F8F45</color>
+    <color name="acrenex_light_green">#DDEFD7</color>
+    <color name="acrenex_gold">#D4A72C</color>
+    <color name="acrenex_gold_light">#FFF4CF</color>
+    <color name="acrenex_background">#F5F6F1</color>
+    <color name="acrenex_surface">#FFFFFF</color>
+    <color name="acrenex_text">#17372D</color>
+    <color name="acrenex_secondary_text">#6E7E77</color>
+    <color name="acrenex_muted">#91A09A</color>
+    <color name="acrenex_border">#DCE4DF</color>
+    <color name="acrenex_success">#2F8F45</color>
+    <color name="acrenex_warning">#C98B24</color>
+    <color name="acrenex_error">#C64B4B</color>
+    <color name="verified">@color/acrenex_success</color>
+    <color name="pending">@color/acrenex_warning</color>
+    <color name="primary_blue">@color/acrenex_blue</color>
+    <color name="primary">@color/acrenex_navy</color>
+    <color name="primary_dark">@color/acrenex_navy</color>
+    <color name="background">@color/acrenex_background</color>
+    <color name="text_primary">@color/acrenex_text</color>
+    <color name="text_secondary">@color/acrenex_secondary_text</color>
+    <color name="login_top">@color/acrenex_navy</color>
+    <color name="login_bottom">@color/acrenex_blue</color>
+    <color name="login_overlay">#990B3B2E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

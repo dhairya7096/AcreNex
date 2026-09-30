@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function self(uid) { return signedIn() && request.auth.uid == uid; }
+    function role() {
+      return signedIn() && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        ? get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role : '';
+    }
+    function officer() { return role() in ['Revenue Officer','Registration Officer','Survey / GIS Officer','Municipal / Planning Officer','Property Tax Officer','Dispute / Case Officer','Environment / Restriction Officer','Super Admin / Command Centre']; }
+    function admin() { return role() == 'Super Admin / Command Centre'; }
+
+    match /users/{uid} {
+      allow create: if self(uid) && (request.resource.data.role == 'Citizen' || (request.resource.data.accountType == 'OFFICER' && request.resource.data.status == 'ACTIVE_DEMO' && request.resource.data.employeeId is string));
+      allow read: if self(uid) || officer();
+      allow update: if self(uid) && request.resource.data.role == resource.data.role;
+      allow delete: if admin();
+    }
+    match /parcels/{ulpin} {
+      allow read: if signedIn();
+      allow create, update: if officer();
+      allow delete: if admin();
+    }
+    match /documents/{id} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow update, delete: if officer() || (signedIn() && resource.data.ownerUid == request.auth.uid);
+    }
+    match /applications/{id} {
+      allow read: if signedIn() && (resource.data.applicantUid == request.auth.uid || officer());
+      allow create: if signedIn() && request.resource.data.applicantUid == request.auth.uid;
+      allow update: if officer() || (signedIn() && resource.data.applicantUid == request.auth.uid);
+    }
+    match /auditLogs/{id} {
+      allow read: if admin();
+      allow create: if signedIn();
+      allow update, delete: if admin();
+    }
+  }
+}

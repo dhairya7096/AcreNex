@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">AcreNex</string>
+
+    <string name="app_tagline">
+        Smart Digital Land Intelligence
+    </string>
+
+    <string name="app_description">
+        One Parcel • One ULPIN • Complete Land Intelligence
+    </string>
+
+    <string name="citizen">Citizen</string>
+    <string name="revenue_officer">Revenue Officer</string>
+    <string name="municipal_officer">Municipal Officer</string>
+    <string name="survey_officer">Survey Officer</string>
+    <string name="registration_officer">Registration Officer</string>
+    <string name="super_admin">Super Admin</string>
+
+</resources>

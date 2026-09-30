@@ -1,0 +1,5 @@
+package com.acrenex.app.activities;
+import android.database.Cursor;import android.os.Bundle;import android.widget.*;import androidx.appcompat.app.AppCompatActivity;import com.acrenex.app.database.DatabaseManager;import com.acrenex.app.utils;
+public class LayerControlActivity extends AppCompatActivity{
+ @Override protected void onCreate(Bundle b){super.onCreate(b);LinearLayout root=utils.screen(this,"GIS Layer Control","Turn parcel governance layers on/off in the prototype GIS stack.");DatabaseManager m=new DatabaseManager(this);Cursor c=m.getDatabase().rawQuery("SELECT layer_name,category,source_department,standard,access_scope,enabled FROM gis_layers ORDER BY id",null);try{while(c.moveToNext()){LinearLayout box=utils.column(this);Switch sw=new Switch(this);sw.setText(c.getString(0));sw.setTextSize(16);sw.setTextColor(utils.TEXT);sw.setChecked(c.getInt(5)==1);box.addView(sw);utils.row(box,this,"Category",c.getString(1));utils.row(box,this,"Source",c.getString(2));utils.row(box,this,"Standard",c.getString(3));utils.row(box,this,"Access",c.getString(4));utils.addCard(root,box,this);}}finally{c.close();}utils.setScreenContentView(this, root);}
+}

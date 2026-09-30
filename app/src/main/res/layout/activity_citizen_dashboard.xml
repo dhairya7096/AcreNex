@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F6F1">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <ImageView android:id="@+id/ivHeaderLogo" android:layout_width="52dp" android:layout_height="52dp" android:background="#FFFFFF" android:padding="5dp" android:src="@drawable/ic_acrenex_mark" android:contentDescription="AcreNex" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACRENEX" android:textColor="#0B3B2E" android:textSize="19sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PERSONAL LAND WORKSPACE" android:textColor="#2F8F45" android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12" />
+                </LinearLayout>
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardNotifications" android:layout_width="45dp" android:layout_height="45dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="16dp" app:strokeColor="#DCE4DF" app:strokeWidth="1dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="•" android:textColor="#D4A72C" android:textSize="30sp" />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:id="@+id/tvProfile" android:layout_width="45dp" android:layout_height="45dp" android:layout_marginStart="8dp" app:cardBackgroundColor="#0B3B2E" app:cardCornerRadius="16dp">
+                    <TextView android:id="@+id/tvProfileInitial" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="A" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="GOOD TO SEE YOU" android:textColor="#2F8F45" android:textSize="9sp" android:textStyle="bold" android:letterSpacing="0.14" />
+            <TextView android:id="@+id/tvWelcomeName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Welcome back" android:textColor="#17372D" android:textSize="27sp" android:textStyle="bold" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Your land records, map and services — connected around one parcel identity." android:textColor="#6E7E77" android:textSize="12sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPrimaryParcel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#0B3B2E"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="PRIMARY PARCEL" android:textColor="#E7C65B" android:textSize="9sp" android:textStyle="bold" android:letterSpacing="0.13" />
+                        <TextView android:id="@+id/tvPrimaryVerification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AI READY" android:textColor="#DDEFD7" android:textSize="9sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvPrimaryUlpin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="ULPIN unavailable" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tvPrimaryLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Location" android:textColor="#CDE0D7" android:textSize="11sp" />
+                    <TextView android:id="@+id/tvPrimaryArea" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="0.00 Acres" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="horizontal">
+                        <TextView android:id="@+id/tvOwnershipStatus" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Ownership" android:textColor="#DDEFD7" android:textSize="9sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvRegistrationStatus" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Registration" android:textColor="#DDEFD7" android:textSize="9sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvTaxStatus" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tax" android:textColor="#DDEFD7" android:textSize="9sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvLandUseStatus" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Land use" android:textColor="#DDEFD7" android:textSize="9sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvViewParcel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Open complete parcel intelligence  →" android:textColor="#E7C65B" android:textSize="11sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="84dp" android:layout_weight="1" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="18dp" app:strokeColor="#DCE4DF" app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical"><TextView android:id="@+id/tvParcelCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#0B3B2E" android:textSize="21sp" android:textStyle="bold"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PARCELS" android:textColor="#6E7E77" android:textSize="8sp" android:textStyle="bold"/></LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="84dp" android:layout_marginStart="8dp" android:layout_weight="1" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="18dp" app:strokeColor="#DCE4DF" app:strokeWidth="1dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical"><TextView android:id="@+id/tvTotalArea" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.00" android:textColor="#176B5A" android:textSize="21sp" android:textStyle="bold"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TOTAL ACRES" android:textColor="#6E7E77" android:textSize="8sp" android:textStyle="bold"/></LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="84dp" android:layout_marginStart="8dp" android:layout_weight="1" app:cardBackgroundColor="#FFF4CF" app:cardCornerRadius="18dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical"><TextView android:id="@+id/tvVerifiedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#7B5A12" android:textSize="21sp" android:textStyle="bold"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="READY" android:textColor="#7B5A12" android:textSize="8sp" android:textStyle="bold"/></LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="LAND TOOLS" android:textColor="#6E7E77" android:textSize="9sp" android:textStyle="bold" android:letterSpacing="0.14" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardMap" android:layout_width="0dp" android:layout_height="96dp" android:layout_weight="1" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="18dp" app:strokeColor="#DCE4DF" app:strokeWidth="1dp"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⌖" android:textColor="#176B5A" android:textSize="27sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GIS Map" android:textColor="#17372D" android:textSize="11sp" android:textStyle="bold"/></LinearLayout></com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardSearch" android:layout_width="0dp" android:layout_height="96dp" android:layout_marginStart="8dp" android:layout_weight="1" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="18dp" app:strokeColor="#DCE4DF" app:strokeWidth="1dp"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⌕" android:textColor="#2F8F45" android:textSize="27sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Find Parcel" android:textColor="#17372D" android:textSize="11sp" android:textStyle="bold"/></LinearLayout></com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:id="@+id/cardDocuments" android:layout_width="0dp" android:layout_height="96dp" android:layout_marginStart="8dp" android:layout_weight="1" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="18dp" app:strokeColor="#DCE4DF" app:strokeWidth="1dp"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▤" android:textColor="#D4A72C" android:textSize="25sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Documents" android:textColor="#17372D" android:textSize="11sp" android:textStyle="bold"/></LinearLayout></com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardAI" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:cardBackgroundColor="#EAF5EE" app:cardCornerRadius="20dp" app:strokeColor="#CDE4D3" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="15dp" android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical"><TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="AI LAND REVIEW" android:textColor="#2F8F45" android:textSize="9sp" android:textStyle="bold" android:letterSpacing="0.12"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GROUNDED" android:textColor="#0B3B2E" android:textSize="8sp" android:textStyle="bold"/></LinearLayout>
+                    <TextView android:id="@+id/tvAIHeadline" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Connect a parcel to start AI review" android:textColor="#17372D" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tvAIInsight" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="AcreNex AI explains signals from parcel records instead of inventing facts." android:textColor="#587068" android:textSize="10sp" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnAskAI" android:layout_width="wrap_content" android:layout_height="42dp" android:layout_marginTop="10dp" android:text="Ask AI  →" android:textAllCaps="false" android:textColor="#FFFFFF" app:backgroundTint="#176B5A" app:cornerRadius="13dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="8dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="22dp" app:cardElevation="8dp" app:strokeColor="#DCE4DF" app:strokeWidth="1dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⌂" android:textColor="#176B5A" android:textSize="24sp" android:textStyle="bold"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textColor="#176B5A" android:textSize="9sp" android:textStyle="bold"/></LinearLayout>
+            <LinearLayout android:id="@+id/navMap" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⌖" android:textColor="#6E7E77" android:textSize="24sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Map" android:textColor="#6E7E77" android:textSize="9sp"/></LinearLayout>
+            <LinearLayout android:id="@+id/navServices" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▤" android:textColor="#6E7E77" android:textSize="23sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Services" android:textColor="#6E7E77" android:textSize="9sp"/></LinearLayout>
+            <LinearLayout android:id="@+id/navProfile" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="●" android:textColor="#6E7E77" android:textSize="21sp"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="#6E7E77" android:textSize="9sp"/></LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

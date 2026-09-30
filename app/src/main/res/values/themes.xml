@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AcreNex" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/acrenex_navy</item>
+        <item name="colorPrimaryVariant">@color/acrenex_blue</item>
+        <item name="colorSecondary">@color/acrenex_gold</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/acrenex_background</item>
+        <item name="android:navigationBarColor">@color/acrenex_background</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/acrenex_background</item>
+    </style>
+</resources>

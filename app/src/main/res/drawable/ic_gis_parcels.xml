@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="150dp"
+    android:viewportWidth="300"
+    android:viewportHeight="150">
+
+    <!-- Subtle terrain/grid -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#355E59"
+        android:strokeWidth="1"
+        android:pathData="M20,20 L280,20 M20,50 L280,50 M20,80 L280,80 M20,110 L280,110 M20,140 L280,140" />
+
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#355E59"
+        android:strokeWidth="1"
+        android:pathData="M40,10 L40,140 M80,10 L80,140 M120,10 L120,140 M160,10 L160,140 M200,10 L200,140 M240,10 L240,140" />
+
+    <!-- Parcel 1 -->
+    <path
+        android:fillColor="#173E3A"
+        android:strokeColor="#73B7A6"
+        android:strokeWidth="2"
+        android:pathData="M25,25 L92,18 L105,67 L72,82 L30,68 Z" />
+
+    <!-- Parcel 2 -->
+    <path
+        android:fillColor="#19433E"
+        android:strokeColor="#73B7A6"
+        android:strokeWidth="2"
+        android:pathData="M92,18 L155,25 L150,70 L105,67 Z" />
+
+    <!-- Parcel 3 -->
+    <path
+        android:fillColor="#163A37"
+        android:strokeColor="#73B7A6"
+        android:strokeWidth="2"
+        android:pathData="M155,25 L215,17 L225,62 L150,70 Z" />
+
+    <!-- Parcel 4 -->
+    <path
+        android:fillColor="#1A4640"
+        android:strokeColor="#73B7A6"
+        android:strokeWidth="2"
+        android:pathData="M215,17 L270,30 L275,75 L225,62 Z" />
+
+    <!-- Parcel 5 -->
+    <path
+        android:fillColor="#153A36"
+        android:strokeColor="#73B7A6"
+        android:strokeWidth="2"
+        android:pathData="M30,68 L72,82 L66,132 L25,120 Z" />
+
+    <!-- Parcel 6 -->
+    <path
+        android:fillColor="#1A4540"
+        android:strokeColor="#73B7A6"
+        android:strokeWidth="2"
+        android:pathData="M72,82 L105,67 L150,70 L145,125 L66,132 Z" />
+
+    <!-- Parcel 7 -->
+    <path
+        android:fillColor="#19423D"
+        android:strokeColor="#73B7A6"
+        android:strokeWidth="2"
+        android:pathData="M150,70 L225,62 L235,118 L145,125 Z" />
+
+    <!-- Parcel 8 -->
+    <path
+        android:fillColor="#163B37"
+        android:strokeColor="#73B7A6"
+        android:strokeWidth="2"
+        android:pathData="M225,62 L275,75 L270,130 L235,118 Z" />
+
+    <!-- Selected parcel -->
+    <path
+        android:fillColor="#285A50"
+        android:strokeColor="#B8E5D7"
+        android:strokeWidth="3"
+        android:pathData="M105,67 L150,70 L145,125 L66,132 L72,82 Z" />
+
+    <!-- Survey connection line -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#A7DCCF"
+        android:strokeWidth="1.5"
+        android:pathData="M42,35 L125,96 L204,40 L255,104" />
+
+    <!-- Survey nodes -->
+    <path
+        android:fillColor="#D2F1E8"
+        android:pathData="M38,31 L46,31 L46,39 L38,39 Z" />
+
+    <path
+        android:fillColor="#D2F1E8"
+        android:pathData="M121,92 L129,92 L129,100 L121,100 Z" />
+
+    <path
+        android:fillColor="#D2F1E8"
+        android:pathData="M200,36 L208,36 L208,44 L200,44 Z" />
+
+    <path
+        android:fillColor="#D2F1E8"
+        android:pathData="M251,100 L259,100 L259,108 L251,108 Z" />
+
+</vector>

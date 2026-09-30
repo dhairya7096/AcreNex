@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_acrenex_mark"
+        android:roundIcon="@drawable/ic_acrenex_mark"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AcreNex">
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".activities.ForgotPasswordActivity" android:exported="false" />
+        <activity android:name=".activities.OfficerRegisterActivity" android:exported="false" />
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.ProofVerificationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.CitizenDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.OfficerDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.VerificationSuccessActivity"
+            android:exported="false" />
+        <activity android:name=".activities.NotificationsActivity" android:exported="false" />
+        <activity android:name=".activities.ProfileActivity" android:exported="false" />
+        <activity android:name=".activities.MapActivity" android:exported="false" />
+        <activity android:name=".activities.ParcelSearchActivity" android:exported="false" />
+        <activity android:name=".activities.ParcelDetailsActivity" android:exported="false" />
+        <activity android:name=".activities.DocumentActivity" android:exported="false" />
+        <activity android:name=".activities.ApplicationsActivity" android:exported="false" />
+        <activity android:name=".activities.AIAssistantActivity" android:exported="false" />
+        <activity android:name=".activities.OwnershipDetailsActivity" android:exported="false" />
+        <activity android:name=".activities.LandRecordsActivity" android:exported="false" />
+        <activity android:name=".activities.ApplicationStatusActivity" android:exported="false" />
+        <activity android:name=".activities.AlertsActivity" android:exported="false" />
+        <activity android:name=".activities.AnalyticsActivity" android:exported="false" />
+        <activity android:name=".activities.WorkflowActivity" android:exported="false" />
+        <activity android:name=".activities.AuditLogActivity" android:exported="false" />
+        <activity android:name=".activities.LandStackHubActivity" android:exported="false" />
+        <activity android:name=".activities.PropertyTaxActivity" android:exported="false" />
+        <activity android:name=".activities.RestrictionsActivity" android:exported="false" />
+        <activity android:name=".activities.UtilitiesActivity" android:exported="false" />
+        <activity android:name=".activities.DisputeActivity" android:exported="false" />
+        <activity android:name=".activities.ServiceRequestActivity" android:exported="false" />
+        <activity android:name=".activities.DataQualityActivity" android:exported="false" />
+        <activity android:name=".activities.InteroperabilityActivity" android:exported="false" />
+        <activity android:name=".activities.StateConfigurationActivity" android:exported="false" />
+        <activity android:name=".activities.BuildingPermissionActivity" android:exported="false" />
+        <activity android:name=".activities.ChangeDetectionActivity" android:exported="false" />
+        <activity android:name=".activities.LayerControlActivity" android:exported="false" />
+        <activity android:name=".activities.PredictiveInsightsActivity" android:exported="false" />
+        <activity android:name=".activities.OfficerRoleSelectionActivity" android:exported="false" />
+        <activity android:name=".activities.RevenueOfficerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.RegistrationOfficerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.SurveyGISOfficerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.PlanningOfficerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.TaxOfficerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.DisputeOfficerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.EnvironmentOfficerDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.SuperAdminDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.Parcel360Activity" android:exported="false" />
+        <activity android:name=".activities.AIGovernanceReviewActivity" android:exported="false" />
+        <activity android:name=".activities.DepartmentWorkflowActivity" android:exported="false" />
+
+
+
+    </application>
+
+</manifest>

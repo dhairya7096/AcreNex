@@ -1,0 +1,5 @@
+# Copy to project root as firebase.properties and fill values from YOUR Firebase Android app.
+firebase.apiKey=REPLACE_WITH_FIREBASE_API_KEY
+firebase.appId=REPLACE_WITH_FIREBASE_APP_ID
+firebase.projectId=REPLACE_WITH_FIREBASE_PROJECT_ID
+firebase.storageBucket=REPLACE_WITH_FIREBASE_STORAGE_BUCKET
